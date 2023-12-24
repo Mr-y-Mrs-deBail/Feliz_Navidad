@@ -1,0 +1,913 @@
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&family=Oswald&family=Rubik+Doodle+Shadow&display=swap');
+
+body{
+    background: rgb(0, 0, 0);
+	font-family: 'Diphylleia', sans-serif;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	margin-top: 80px;
+	padding-bottom: 60px;
+}
+
+.card{
+	position: relative;
+	width: 300px;
+	height: 425px;
+	border: 10px solid #ffffff;
+	margin: 60px auto 0 auto;
+	box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255), rgba(255, 255, 255, 0.5)), url();
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-color: #5eff00;
+}
+
+.card .text-container{
+	width: 80%;
+	height: 80%;
+	margin: auto;
+}
+
+.card .text-container #head p{
+	font-size: 1.5em;
+	margin: 60px auto 60px auto;
+}
+
+.card p{
+	font-size: 0.8em;
+	line-height: 1;
+	color: #000000;
+	text-align: center;
+	margin: 30px auto 0px auto;
+}
+
+.card .front{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	margin: -10px 0px 0px -10px;
+	border: 10px solid #288828;
+	backface-visibility: hidden;
+	background-image: url(img/stars.gif);
+	background-position: center;
+	background-color: #ffffff;
+	background-size: cover;
+	transform-style: preserve-3d;
+	transform-origin: 0% 50%;
+	transform: perspective(800px) rotateY(0deg);
+	transition: all 0.8s ease-in-out;
+	animation: colores 5s ease-in-out infinite;
+}
+
+@keyframes colores{
+	0%{
+		border-color: #25e1e7;
+	}
+	20%{
+		border-color: #5eff00;
+	}
+	50%{
+		border-color: #f02e0c;
+	}
+	75%{
+		border-color: #fbff0c;
+	}
+	100%{
+		border-color: #25e1e7;
+	}
+}
+
+.card:hover .front p, .card:hover .front h2, .card:hover .back h2 {
+	opacity: 0;
+}
+
+.card:hover .front{
+	transform: perspective(800px) rotateY(-170deg);
+	background-color: #46ee4e98;
+}
+
+.card:hover .back{
+	transform: perspective(800px) rotateY(-170deg);
+	box-shadow: 7px 0px 5px 0px rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
+	background-color: #ffffff;
+}
+
+.card .back{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border: 10px solid #ffffff;
+	margin: -10px 0px 0px -10px;
+	backface-visibility: visible;
+	filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, .5));
+	transform-style: preserve-3d;
+	transform-origin: 0% 50%;
+	transform: perspective(800px) rotateY(0deg);
+	transition: all 0.8s ease-in-out;
+	background-image: url(img/tree.gif);
+	background-position: center;
+	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.img01{
+	position: relative;
+	width: 120px;
+	top: 310px;
+	left: 20px;
+}
+
+.card .front-img, .card .back-img {
+    opacity: 1;
+    transition: opacity 0.8s;
+}
+
+.card:hover .front-img, .card:hover .back-img {
+    opacity: 0;
+}
+
+.texto {
+	position: absolute;
+	top: 50px;
+	left: 150%;
+}
+
+.img2{
+	position: relative;
+	filter: drop-shadow(10px 10px 5px rgba(0,0,0,0.75));
+	width: 100%;
+	top: 140px;
+	left: 5px;
+}
+
+.titulo{
+	position: absolute;
+	top: -10px;
+	left: 25%;
+	transform: translateX(-15%);
+	text-align: center;
+	font-family: 'Rubik Doodle Shadow', sans-serif;
+	background: linear-gradient(to right, #FF0000, #008000);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: 5px 5px 7px rgba(0,0,0,0.75);
+}
+
+.present0{
+	display: flex;
+	justify-content: space-around;
+}
+
+.present, .present3, .present4{
+	margin-top: 12px;
+	width: 40%;
+	cursor: pointer;
+}
+
+.present img, .present3 img, .present4 img{
+	width: 100%;
+	height: auto;
+}
+
+.contenedor-exit{
+	margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    max-height: 100vh;
+	z-index: 0;
+}
+
+.exit-button, .Video_navideño {
+    margin: 10px 0;
+	z-index: 0;
+}
+
+audio{
+	opacity: 0;
+	height: 10px;
+}
+
+.song{
+	position: absolute;
+	width: 9%;
+	cursor: pointer;
+	margin-left: 200px;
+	filter: drop-shadow(2px 2px 4px rgba(255, 255, 255, 0.5));
+	z-index: 0;
+}
+
+.exit-button {
+	width: 120px;
+	height: 95px;
+	font-family: 'Rubik Doodle Shadow', sans-serif;
+	color: #000000;
+	background-image: url(img/volver.gif);
+	background-size: 100px;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	text-decoration: none;
+	text-shadow: 0.5px 0.5px 0.5px rgb(0, 0, 0);
+	filter: drop-shadow(2px 2px 7px rgba(255, 255, 255, 0.5));
+	z-index: 0;
+}
+
+.exit-button:hover {
+	color: red;
+}
+
+.text-html, .titulo02, .inputLabel{
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.titulo03{
+	color: rgb(0, 0, 0);
+	text-shadow:
+    -1px -1px 0 #ffffff,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.bubbles-animation1{
+	top: 55%;
+	left: 10%;
+	height: 8px;
+	width: 8px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2); 
+	border-radius: 50px;
+	position: absolute;
+	animation: animate 7s linear infinite;
+	z-index: 100;
+}
+  
+.bubbles-animation2{
+	top: 60%;
+	left: 90%;
+	animation: animate 10s linear infinite;
+	height: 5px;
+	width: 5px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2); 
+	border-radius: 50px;
+	position: absolute;
+	z-index: 100;
+}
+  
+.bubbles-animation3{
+	top: 7%;
+	left: 33%;
+	animation: animate 7s linear infinite;
+	height: 10px;
+	width: 10px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2);  
+	border-radius: 50px;
+	position: absolute;
+	z-index: 100;
+}
+  
+.bubbles-animation4{
+	top: 96%;
+	left: 26%;
+	animation: animate 7s linear infinite;
+	height: 9px;
+	width: 9px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2); 
+	border-radius: 50px;
+	position: absolute;
+	z-index: 100;
+}
+  
+.bubbles-animation5{
+	top: 79%;
+	left: 5%;
+	animation: animate 9s linear infinite;
+	height: 5px;
+	width: 5px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2); 
+	border-radius: 50px;
+	position: absolute;
+	z-index: 100;
+}
+  
+.bubbles-animation6{
+	top: 30%;
+	left: 95%;
+	animation: animate 10s linear infinite;
+	height: 9px;
+	width: 9px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2); 
+	border-radius: 50px;
+	position: absolute;
+	z-index: 100;
+}
+  
+.bubbles-animation7{
+	top: 88%;
+	left: 14%;
+	animation: animate 10s linear infinite;
+	z-index: 100;
+	height: 7px;
+	width: 7px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2); 
+	border-radius: 50px;
+	position: absolute;
+	z-index: 100;
+}
+  
+.bubbles-animation8{
+	top: 80%;
+	left: 60%;
+	animation: animate 10s linear infinite;
+	z-index: 100;
+	height: 5px;
+	width: 5px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2); 
+	border-radius: 50px;
+	position: absolute;
+	z-index: 100;
+}
+
+.bubbles-animation9{
+	top: 15%;
+	left: 60%;
+	animation: animate 13s linear infinite;
+	z-index: 100;
+	height: 7px;
+	width: 7px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2); 
+	border-radius: 50px;
+	position: absolute;
+	z-index: 100;
+}
+
+.bubbles-animation10{
+	top: 5%;
+	left: 20%;
+	animation: animate 4s linear infinite;
+	height: 5px;
+	width: 5px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2); 
+	border-radius: 50px;
+	position: absolute;
+	z-index: 100;
+}
+
+.bubbles-animation11{
+	top: 10%;
+	left: 85%;
+	animation: animate 13s linear infinite;
+	height: 5px;
+	width: 5px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2); 
+	border-radius: 50px;
+	position: absolute;
+	z-index: 100;
+}
+  
+.bubbles-animation12{
+	top: 20%;
+	left: 80%;
+	animation: animate 10s linear infinite;
+	z-index: 100;
+	height: 8px;
+	width: 8px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2); 
+	border-radius: 50px;
+	position: absolute;
+}
+  
+.bubbles-animation13{
+	top: 39%;
+	left: 19%;
+	animation: animate 3s linear infinite;
+	z-index: 100;
+	height: 10px;
+	width: 10px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2); 
+	border-radius: 50px;
+	position: absolute;
+}
+  
+.bubbles-animation14{
+	top: 35%;
+	left: 5%;
+	animation: animate 5s linear infinite;
+	z-index: 100;
+	height: 8px;
+	width: 8px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2); 
+	border-radius: 50px;
+	position: absolute;
+}
+  
+.bubbles-animation15{
+	top: 93%;
+	left: 70%;
+	animation: animate 8s linear infinite;
+	z-index: 100;
+	height: 5px;
+	width: 5px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2); 
+	border-radius: 50px;
+	position: absolute;
+}
+  
+.bubbles-animation16{
+	top: 75%;
+	left: 80%;
+	animation: animate 5s linear infinite;
+	z-index: 100;
+	height: 5px;
+	width: 5px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2); 
+	border-radius: 50px;
+	position: absolute;
+}
+  
+.bubbles-animation17{
+	top: 45%;
+	left: 28%;
+	animation: animate 10s linear infinite;
+	z-index: 100;
+	height: 8px;
+	width: 8px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2); 
+	border-radius: 50px;
+	position: absolute;
+}
+  
+.bubbles-animation18{
+	top: 40%;
+	left: 25%;
+	animation: animate 5s linear infinite;
+	z-index: 100;
+	height: 5px;
+	width: 5px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2); 
+	border-radius: 50px;
+	position: absolute;
+}
+  
+.bubbles-animation19{
+	top: 60%;
+	left: 95%;
+	animation: animate 10s linear infinite;
+	z-index: 100;
+	height: 5px;
+	width: 5px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2); 
+	border-radius: 50px;
+	position: absolute;
+}
+  
+.bubbles-animation20{
+	top: 59%;
+	left: 78%;
+	animation: animate 7s linear infinite;
+	z-index: 100;
+	height: 3px;
+	width: 3px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2); 
+	border-radius: 50px;
+	position: absolute;
+}
+  
+.bubbles-animation21{
+	top: 25%;
+	left: 56%;
+	animation: animate 6s linear infinite;
+	z-index: 100;
+	height: 3px;
+	width: 3px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2); 
+	border-radius: 50px;
+	position: absolute;
+}
+  
+.bubbles-animation22{
+	top: 6%;
+	left: 65%;
+	animation: animate 4s linear infinite;
+	z-index: 100;
+	height: 10px;
+	width: 10px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2); 
+	border-radius: 50px;
+	position: absolute;
+}
+  
+  
+.bubbles-animation23{
+	top: 5%;
+	left: 4%;
+	animation: animate 10s linear infinite;
+	z-index: 100;
+	height: 6px;
+	width: 6px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2); 
+	border-radius: 50px;
+	position: absolute;
+}
+  
+.bubbles-animation24{
+	left: 13%;
+	animation: animate 12s linear infinite;
+	z-index: 100;
+	height: 4px;
+	width: 4px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2); 
+	border-radius: 50px;
+	position: absolute;
+}
+  
+.bubbles-animation25{
+	top: 85%;
+	left: 35%;
+	animation: animate 10s linear infinite;
+	z-index: 100;
+	height: 6px;
+	width: 6px;
+	background: white;
+	box-shadow: 
+	  0px 0px 10px white,
+	  0px 0px 20px white,
+	  0px 0px 30px white,
+	  0px 0px 40px white,
+	  0px 0px 50px white,
+	  inset -10px -10px rgba(255,255,255,.2),
+	  inset -20px -20px rgba(255,255,255,.2),
+	  inset -30px -30px rgba(255,255,255,.2),
+	  inset -40px -40px rgba(255,255,255,.2),
+	  inset -50px -50px rgba(255,255,255,.2);  
+	border-radius: 50px;
+	position: absolute;
+}
+
+@keyframes animate {
+	to{
+	  opacity: 1;
+	  transform: scale(0) translateY(0) rotate(70deg);
+	}
+	100%{
+	  opacity: 0;
+	  transform: scale(2) translateY(100px) rotate(360deg);
+	}
+}
+
+@media (max-width: 600px){
+	body{
+		margin-top: 150px;
+	}
+	.card {
+		width: 75%;
+		height: auto;
+	}
+	.card .front, .card .back {
+		width: 100%;
+		height: 100%;
+		transform-origin: 50% 100%;
+		transform: perspective(800px) rotateX(0deg);
+		transition: all 1.8s ease-in-out;
+		will-change: transform;
+	}
+	.card:hover .front {
+		transform: perspective(800px) rotateX(-170deg);
+		background-color: #ffffff;
+	}
+	.card:hover .back {
+		transform: perspective(800px) rotateX(-170deg);
+		box-shadow: 7px 0px 5px 0px rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
+		background-color: #ffffff;
+		backface-visibility: visible;
+		z-index: 999;
+	}
+	.img01{
+		width: 130px;
+		top: 268px;
+	}
+.img2{
+	position: absolute;
+	width: 75%;
+	top: 65%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+	.titulo{
+		left: 65px;
+		top: -5px;
+	}
+	.card .text-container #head p{
+		font-size: 1.5em;
+		margin: 60px auto 60px auto;
+	}
+	.texto {
+		top: 75px;
+	}
+	.song{
+		width: 28%;
+		margin-left: 120px;
+	}
+	.exit-button {
+		margin-left: -83px;
+	}
+	.bubbles-animation4{
+		top: 76%;
+	}
+	.bubbles-animation5{
+		top: 63%;
+	}
+	.bubbles-animation7{
+		top: 70%;
+	}
+	.bubbles-animation8{
+		top: 55%;
+	}
+	.bubbles-animation15{
+		top: 62%;
+	}
+	.bubbles-animation25{
+		top: 72%;
+	}
+}
+
+
+  
