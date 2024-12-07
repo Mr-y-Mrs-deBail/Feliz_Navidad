@@ -2,65 +2,71 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, user-scalable=yes">    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="img/logo.png">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, user-scalable=yes">    
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/logo.ico"> 
     <title>Merry Christmas my Love!</title>
 </head>
 <body>
 
-    <div class="bubbles-animation1"></div>
-    <div class="bubbles-animation2"></div>
-    <div class="bubbles-animation3"></div>
-    <div class="bubbles-animation4"></div>
-    <div class="bubbles-animation5"></div>
-    <div class="bubbles-animation6"></div>
-    <div class="bubbles-animation7"></div>
-    <div class="bubbles-animation8"></div>
-    <div class="bubbles-animation9"></div>
-    <div class="bubbles-animation10"></div>
-    <div class="bubbles-animation11"></div>
-    <div class="bubbles-animation12"></div>
-    <div class="bubbles-animation13"></div>
-    <div class="bubbles-animation14"></div>
-    <div class="bubbles-animation15"></div>
-    <div class="bubbles-animation16"></div>
-    <div class="bubbles-animation17"></div>
-    <div class="bubbles-animation18"></div>
-    <div class="bubbles-animation19"></div>
-    <div class="bubbles-animation20"></div>
-    <div class="bubbles-animation21"></div>
-    <div class="bubbles-animation22"></div>
-    <div class="bubbles-animation23"></div>
-    <div class="bubbles-animation24"></div>
-    <div class="bubbles-animation25"></div>
+    <div class="lighT lights1"></div>
+    <div class="lighT lights2"></div>
+    <div class="lighT lights3"></div>
+    <div class="lighT lights4"></div>
+    <div class="lighT lights5"></div>
+    <div class="lighT lights6"></div>
+    <div class="lighT lights7"></div>
+    <div class="lighT lights8"></div>
+    <div class="lighT lights9"></div>
+    <div class="lighT lights10"></div>
+    <div class="lighT lights11"></div>
+    <div class="lighT lights12"></div>
+    <div class="lighT lights13"></div>
+    <div class="lighT lights14"></div>
+    <div class="lighT lights15"></div>
+    <div class="lighT lights16"></div>
+    <div class="lighT lights17"></div>
+    <div class="lighT lights18"></div>
+    <div class="lighT lights19"></div>
+    <div class="lighT lights20"></div>
+    <div class="lighT lights21"></div>
+    <div class="lighT lights22"></div>
+    <div class="lighT lights23"></div>
+    <div class="lighT lights24"></div>
+    <div class="lighT lights25"></div>
+
+    <audio controls autoplay loop>
+        <source src="audio/Christmas.mp3" type="audio/mpeg">
+    </audio>
     
     <div class="card">
         <div class="back">
              <div class="img01">
-                <img width="100%" src="img/TúyYo.png">
+                <img width="100%" src="img/TúyYo.png" alt="mv">
                 <p class="texto">VM</p>
              </div>
         </div>
         <div class="front">
             <h2 class="titulo">¡Merry Christmas <br> Mi Am♡r!</h2>
             <div class="img2">
-               <img class="back-img" width="100%" src="img/portada.png">
+               <img class="back-img" width="100%" src="img/portada.png" alt="portada">
             </div>
         </div>
         
         <div class="text-container">
             <p id="head">Quería enviarte algo súper especial para esta Navidad, mi amor, pero tuve un problema…</p>
            <center><h5 class="text-titulo02">¿Cómo envuelves un abrazo y muchos besitos💋?</h5></center>
+           <p class="textClick">Haz click en cada una de las imágenes mi amor...</p>
 
             <div class="present0">
                 <div id="myImg2" onclick="Image2()" download class="present">
-                    <img id="myImg2Img" width="100%" src="img/present.gif">
+                    <img id="myImg2Img" width="100%" src="img/present.gif" alt="gif">
                 </div>
                 <div class="present3">
-                    <img width="100%" src="img/present03.png">
+                    <img width="100%" src="img/present03.png" alt="regalo">
                 </div>
                 <div class="present4">
-                    <img id="Clicks" width="100%" src="img/present04.gif">
+                    <img id="Clicks" width="100%" src="img/present04.gif" alt="regalo4">
                 </div>                
                 
             </div>
@@ -71,14 +77,14 @@
     </div>
 
     <div class="contenedor-exit">
-        <audio controls autoplay>
-            <source src="audio/Christmas.mp3" type="audio/mpeg">
-        </audio>
 
         <img class="song" id="Song" src="img/song.png" style="cursor:pointer;">
+        <p class="exitP">Click me♡ <br> ↙ </p>
 
         <a onclick="salir()" class="exit-button">Regresar</a>
     </div>
+
+    <!-- Código js -->
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -96,9 +102,6 @@
             confirmButtonText: 'Continuar',
             confirmButtonColor: 'coral',
             allowOutsideClick: false,
-            allEscapeKey: false,
-            allEnterKey: false,
-            stopKeydownPropagation: false,
             customClass: {
                 title: 'titulo02'
             }
@@ -112,292 +115,306 @@
                     background: "url(img/fondo-principal.jpg)",
                     confirmButtonText: '¡Ver mi regalo!',
                     confirmButtonColor: 'coral',
-                    allowOutsideClick: false,
-                    allEscapeKey: false,
-                    allEnterKey: false,
-                    stopKeydownPropagation: false
+                    allowOutsideClick: false
                 })
             }
         })
     </script>
 
     <script>
-            function Image2() {
-        var myImg2Img = document.getElementById("myImg2Img");
-        myImg2Img.src = "img/vale.png";
+        function Image2() {
+            var myImg2Img = document.getElementById("myImg2Img");
+            myImg2Img.src = "img/vale.png";
         }
     </script>
 
     <script>
         document.getElementById("Song").onclick = function () {
-        window.open("https://youtu.be/p_gEcc0WcsE?si=dqAwjHSmkgmc8JEb");
-       };
+            window.open("https://youtu.be/p_gEcc0WcsE?si=dqAwjHSmkgmc8JEb");
+        };
     </script>
 
     <script>
         document.querySelector('.present3 img').addEventListener('click', function() {
-        Swal.fire({
-            title: '¡Shht mi súper esposo!',
-            html: ' <p class="text-html">Sabes que es mejor que cualquier regalo debajo del lindo árbol, Uyyy pues sería estar allí a tu lado mi amor. <br> Te amOOOOOOOOoooo <br> Ahora dime tú amor: <br> ¿Cuál sería el mejor regalo para ti mi amor? <br> Si me lo envías ...</p>',
-            color: 'white',
-            background: "#fff url(img/fondo01.jpg)",
-            confirmButtonText: 'Continuar',
-            confirmButtonColor: '#1E90FF',
-            imageUrl: 'img/present02.png',
-            imageWidth: '250px',
-            imageAlt: 'present02',
-            allowOutsideClick: false,
-            customClass: {
-               title: 'titulo02',
-               inputLabel: 'inputLabel'
-            },
-            input: "textarea",
-            inputLabel: "Puede que se haga realidad Uyyyyyy",
-            inputPlaceholder: "Escribe aquí mi amor...",
-            inputAttributes: {
-                "aria-label": "Escribe aquí mi amor",
-            },
-            showCancelButton: true,
-            cancelButtonColor: '#FF0000',
-            cancelButtonText: 'Cancelar',
-            preConfirm: () => {
-                let mensaje = Swal.getInput().value
-                if (!mensaje) {
-                    Swal.showValidationMessage('Ups debes de escribir algo mi amor...')
-                }
-                return { mensaje: mensaje }
-            }
-        }).then((result) => {
-            if (result.isConfirmed) {
-                fetch('https://formspree.io/f/mayrwdnn', {
-                    method: 'POST',
-                    body: JSON.stringify({message: result.value.mensaje}),
-                    headers: {
-                        'Content-Type': 'application/json'
+            Swal.fire({
+                title: '¡Shht mi súper esposo!',
+                html: ' <p class="text-html">Sabes que es mejor que cualquier regalo debajo del lindo árbol, Uyyy pues sería estar allí a tu lado mi amor. <br> Te amOOOOOOOOoooo <br> Ahora dime tú amor: <br> ¿Cuál sería el mejor regalo para ti mi amor? <br> Si me lo envías ...</p>',
+                color: 'white',
+                background: "#fff url(img/fondo01.jpg)",
+                confirmButtonText: 'Continuar',
+                confirmButtonColor: '#1E90FF',
+                imageUrl: 'img/present02.png',
+                imageWidth: '250px',
+                imageAlt: 'present02',
+                allowOutsideClick: false,
+                customClass: {
+                    title: 'titulo02',
+                    inputLabel: 'inputLabel'
+                },
+                input: "textarea",
+                inputLabel: "Puede que se haga realidad Uyyyyyy",
+                inputPlaceholder: "Escribe aquí mi amor...",
+                inputAttributes: {
+                    "aria-label": "Escribe aquí mi amor",
+                },
+                showCancelButton: true,
+                cancelButtonColor: '#FF0000',
+                cancelButtonText: 'Cancelar',
+                preConfirm: () => {
+                    let mensaje = Swal.getInput().value
+                    if (!mensaje) {
+                        Swal.showValidationMessage('Ups debes de escribir algo mi amor...')
                     }
-                }).then(response => {
-                    if (response.ok) {
-                        Swal.fire({
-                        title: '¡Uyy tu lindo mensaje ha sido enviado mi amor! Ojalá muy pronto tengas tu lindo regalo contigo.',
-                        icon: 'success',
-                        confirmButtonText: 'Continuar',
-                        confirmButtonColor: '#1E90FF',
-                        customClass: {
-                            title: 'titulo02',
-                        },
-                        background: "#fff url(img/fondo01.jpg)"
-                    })
-                    } else {
-                    Swal.fire({
-                        title: '¡Oh no!',
-                        html: '<p class="text-html">Hubo un error mi amor, vuelve a intentarlo sisisi</p>',
-                        icon: 'error',
-                        iconColor: '#FF0000',
-                        confirmButtonText: 'Continuar',
-                        confirmButtonColor: '#1E90FF',
-                        customClass: {
-                            title: 'titulo02',
-                        },
-                        background: "#fff url(img/fondo01.jpg)"
+                    return { mensaje: mensaje }
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    fetch('https://formspree.io/f/mayrwdnn', {
+                        method: 'POST',
+                        body: JSON.stringify({message: result.value.mensaje}),
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    }).then(response => {
+                        if (response.ok) {
+                            Swal.fire({
+                                title: '¡Uyy tu lindo mensaje ha sido enviado mi amor! Ojalá muy pronto tengas tu lindo regalo contigo.',
+                                icon: 'success',
+                                confirmButtonText: 'Continuar',
+                                confirmButtonColor: '#1E90FF',
+                                customClass: {
+                                    title: 'titulo02',
+                                },
+                                background: "#fff url(img/fondo01.jpg)"
+                            })
+                        } else {
+                            Swal.fire({
+                                title: '¡Oh no!',
+                                html: '<p class="text-html">Hubo un error mi amor, vuelve a intentarlo sisisi</p>',
+                                icon: 'error',
+                                iconColor: '#FF0000',
+                                confirmButtonText: 'Continuar',
+                                confirmButtonColor: '#1E90FF',
+                                customClass: {
+                                    title: 'titulo02',
+                                },
+                                background: "#fff url(img/fondo01.jpg)"
+                            })
+                        }
                     })
                 }
             })
-        }
         })
-       })
     </script>
 
     <script>
-    
-        async function showAlerts() {
-        var clickCount = 0;
-        var swalOptions = {
-        background: "#fff url(img/Fondo02.jpg)",
-        confirmButtonColor: '#ac34a2',
-        allowOutsideClick: false,
-        color: 'black',
-        backdrop: `rgba(0,0,0,0.75)`,
-        customClass: {
-            title: 'titulo03'
-        }
-      };
-        while (clickCount < 12) {
-        clickCount++;
-        switch (clickCount) {
-            case 1:
-                await Swal.fire({
-                    ...swalOptions,
-                    title: '♡Sorpresa mi amor°(ᴖ◡ᴖ)°...',
-                    text: '¡Tengo una linda sorpresa para ti mi súper esposo!',
-                    confirmButtonText: 'Ver Sorpresa🥰'          
-                });
-                break;
-            case 2:
-                await Swal.fire({
-                    ...swalOptions,
-                    html: 'Upss, en serio... <br>¿Querías ver tu linda sorpresa mi amor Uyyy?',
-                    confirmButtonText: `Continuar♡`                    
-                });
-                break;
-            case 3:
-                await Swal.fire({
-                    ...swalOptions,
-                    text: 'Entonces sigue avanzando hasta llegar a tu linda sorpresa mi súper todo, todito, todo, todote!',
-                    confirmButtonText: `Continuar♡`         
-                });
-                break;
-            case 4:
-                await Swal.fire({
-                    ...swalOptions,
-                    html:'Shht, sabes mi amor, algún día te voy a preparar arroz con leche Uyyyy <br> ¿Verdad que sí quieres de mi arroz con leche mi amor?',
-                    imageUrl: 'img/MV.png',
-                    confirmButtonText: 'Continuar✨',
-                    imageWidth: '250px',
-                    imageAlt: 'MV'
-                });
-                break;
-            case 5:
-                await Swal.fire({
-                    ...swalOptions,
-                    text: 'Shht, Desearía poder estar así en tus lindos brazos mi amor, sintiendo el calor de tus lindos abrazos y el latido de tu/mi lindo corazón. Eres mi refugio, mi paz y mi felicidad.',
-                    imageUrl: 'img/MV02.png',
-                    imageWidth: '250px',
-                    imageAlt: 'MV',
-                    confirmButtonText: 'Continuar❤️'
-                });
-                break;
-            case 6:
-                await Swal.fire({
-                    ...swalOptions,
-                    text: 'Psst, Psst:  (;´・`)> En serio ya quieres ver tu linda sorpresa mi amor...',
-                    confirmButtonText: 'Sí😊'
-                });
-                break;
-            case 7:
-                await Swal.fire({
-                    ...swalOptions,
-                    html: 'En serio, en serio quieres verla mi amor Uyyyy!?... <br> ¿estás 100% seguro amor?',
-                    confirmButtonText: 'Sí lo estoy😱'
-                });
-                break;
-            case 8:
-                await Swal.fire({
-                    ...swalOptions,
-                    text: 'Entonces sigue avanzando mi súper Todo!!!!',
-                    imageUrl: 'img/Esperar01.gif',
-                    imageWidth: '250px',
-                    imageAlt: 'MV',
-                    confirmButtonText: 'Continuar🥺'
-                });
-                break;
-            case 9:
-                await Swal.fire({
-                    ...swalOptions,
-                    text: 'Shht, Shht ya estás impaciente por ver tu linda sorpresa mi amor...',
-                    imageUrl: 'img/Esperar.gif',
-                    imageWidth: '250px',
-                    imageAlt: 'MV',
-                    confirmButtonText: 'Sí👀',
-                    showCancelButton: true,
-                    cancelButtonText: 'No❌',
-                    cancelButtonColor: '#FF0000'
-                    }).then((result) => {
-                    if (result.isDismissed) {
-                    throw new Error('Mi amor escogió No');
-                }
-                });
-                break;
-            case 10:
-                const { value: color } = await Swal.fire({
-                ...swalOptions,
-                title: '¿¡Entonces elige un lindo color mi amor!?',
-                input: 'radio',
-                inputOptions: {
-                'Azul': 'Azul',
-                'Rojo': 'Rojo'
-                },
-                inputValidator: (value) => {
-                if (!value) {
-                return '¡Buuu debes elegir un lindo color mi amor 😭!'
-                }
-               },
-               confirmButtonText: 'Continuar✨'
+        // Función para precargar imágenes
+        function preloadImages() {
+            const images = [
+                'img/MV.png', 
+                'img/MV02.png', 
+                'img/Esperar01.gif', 
+                'img/Esperar.gif', 
+                'img/Esperar02.gif', 
+                'img/Regalo.gif'
+            ];
+            images.forEach((image) => {
+                const img = new Image();
+                img.src = image;
             });
-
-            if (color) {
-               Swal.fire({
-               ...swalOptions,
-               html: `Uyyy elegiste ${color}, gracias por elegir ese lindo color mi súper esposo. <br> Uyyy espero te súper encante tu linda sorpresa mi amor. <br> Gracias por estar en mi vida y en mi corazón. <br> Feliz Navidad mi amor! <br> Gracias por haber sido súper paciente mi amor y haber llegado hasta aquí, te extraño mi todo.`,
-               imageUrl: 'img/Esperar02.gif',
-               imageWidth: '250px',
-               imageAlt: 'Esperar02',
-               allowOutsideClick: false,
-               allowEscapeKey: false,
-               allowEnterKey: false,
-               showCancelButton: false,
-               confirmButtonText: 'Ver mi linda sorpresa!✨'
-               }).then(async(result) => {
-               if (result.isConfirmed) {
-                await fetch('https://formspree.io/f/mayrwdnn', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({color: color})
-                });         
-                await Swal.fire({
-                    text: '¡Te AmooooOOOOOOOOOOOOOOO! tu lindo regalo se está enviando...',
-                    imageUrl: 'img/Regalo.gif',
-                    imageWidth: '250px',
-                    imageAlt: 'MV',
-                    showConfirmButton: false,
-                    timer: 10000,
-                    background: "transparent",
-                    allowOutsideClick: false,
-                    color: 'white',
-                    position: "top-end"
-                });
-            }
-        });
-       }
-      break;
         }
-       }
-      }
-
-      $('#Clicks').on('click', showAlerts);
-
+        
+        // Llamar a la función para precargar imágenes
+        preloadImages();
+        async function showAlerts() {
+            var clickCount = 0;
+            var swalOptions = {
+                background: "#fff url(img/Fondo02.jpg)",
+                confirmButtonColor: '#ac34a2',
+                allowOutsideClick: false,
+                color: 'black',
+                backdrop: `rgba(0,0,0,0.75)`,
+                customClass: {
+                    title: 'titulo03'
+                }
+            };
+            
+            let alertPromise = Promise.resolve();
+            while (clickCount < 12) {
+                clickCount++;
+                switch (clickCount) {
+                    case 1:
+                        alertPromise = alertPromise.then(() => Swal.fire({
+                            ...swalOptions,
+                            title: '♡Sorpresa mi amor°(ᴖ◡ᴖ)°...',
+                            text: '¡Tengo una linda sorpresa para ti mi súper esposo!',
+                            confirmButtonText: 'Ver Sorpresa🥰'          
+                        }));
+                    break;
+                    case 2:
+                        alertPromise = alertPromise.then(() => Swal.fire({
+                            ...swalOptions,
+                            html: 'Upss, en serio... <br>¿Querías ver tu linda sorpresa mi amor Uyyy?',
+                            confirmButtonText: `Continuar♡`                    
+                        }));
+                    break;
+                    case 3:
+                        alertPromise = alertPromise.then(() => Swal.fire({
+                            ...swalOptions,
+                            text: 'Entonces sigue avanzando hasta llegar a tu linda sorpresa mi súper todo, todito, todo, todote!',
+                            confirmButtonText: `Continuar♡`         
+                        }));
+                    break;
+                    case 4:
+                        alertPromise = alertPromise.then(() => Swal.fire({
+                            ...swalOptions,
+                            html: 'Shht, sabes mi amor, algún día te voy a preparar arroz con leche Uyyyy <br> ¿Verdad que sí quieres de mi arroz con leche mi amor?',
+                            imageUrl: 'img/MV.png',
+                            confirmButtonText: 'Continuar✨',
+                            imageWidth: '250px',
+                            imageAlt: 'MV'
+                        }));
+                    break;
+                    case 5:
+                        alertPromise = alertPromise.then(() => Swal.fire({
+                            ...swalOptions,
+                            text: 'Shht, Desearía poder estar así en tus lindos brazos mi amor, sintiendo el calor de tus lindos abrazos y el latido de tu/mi lindo corazón. Eres mi refugio, mi paz y mi felicidad.',
+                            imageUrl: 'img/MV02.png',
+                            imageWidth: '250px',
+                            imageAlt: 'MV',
+                            confirmButtonText: 'Continuar❤️'
+                        }));
+                    break;
+                    case 6:
+                        alertPromise = alertPromise.then(() => Swal.fire({
+                            ...swalOptions,
+                            text: 'Psst, Psst:  (;´・`)> En serio ya quieres ver tu linda sorpresa mi amor...',
+                            confirmButtonText: 'Sí😊'
+                        }));
+                    break;
+                    case 7:
+                        alertPromise = alertPromise.then(() => Swal.fire({
+                            ...swalOptions,
+                            html: 'En serio, en serio quieres verla mi amor Uyyyy!?... <br> ¿estás 100% seguro amor?',
+                            confirmButtonText: 'Sí lo estoy😱'
+                        }));
+                    break;
+                    case 8:
+                        alertPromise = alertPromise.then(() => Swal.fire({
+                            ...swalOptions,
+                            text: 'Entonces sigue avanzando mi súper Todo!!!!',
+                            imageUrl: 'img/Esperar01.gif',
+                            imageWidth: '250px',
+                            imageAlt: 'MV',
+                            confirmButtonText: 'Continuar🥺'
+                        }));
+                    break;
+                    case 9:
+                        alertPromise = alertPromise.then(() => Swal.fire({
+                            ...swalOptions,
+                            text: 'Shht, Shht ya estás impaciente por ver tu linda sorpresa mi amor...',
+                            imageUrl: 'img/Esperar.gif',
+                            imageWidth: '250px',
+                            imageAlt: 'MV',
+                            confirmButtonText: 'Sí👀',
+                            showCancelButton: true,
+                            cancelButtonText: 'No❌',
+                            cancelButtonColor: '#FF0000'
+                        }).then((result) => {
+                            if (result.dismiss === Swal.DismissReason.cancel) { 
+                                console.log('Mi amor escogió No'); return Promise.reject('Mi amor escogió No');
+                            }
+                        }));
+                    break;
+                    case 10:
+                        alertPromise = alertPromise.then(() => Swal.fire({
+                            ...swalOptions,
+                            title: '¿¡Entonces elige un lindo color mi amor!?',
+                            input: 'radio',
+                            inputOptions: {
+                                'Azul': 'Azul',
+                                'Rojo': 'Rojo'
+                            },
+                            inputValidator: (value) => {
+                                if (!value) {
+                                    return '¡Buuu debes elegir un lindo color mi amor 😭!'
+                                }
+                            },
+                            confirmButtonText: 'Continuar✨'
+                        }).then(({ value: color }) => {
+                            if (color) {
+                                return Swal.fire({
+                                    ...swalOptions,
+                                    html: `Uyyy elegiste ${color}, gracias por elegir ese lindo color mi súper esposo. <br> Uyyy espero te súper encante tu linda sorpresa mi amor. <br> Gracias por estar en mi vida y en mi corazón. <br> Feliz Navidad mi amor! <br> Gracias por haber sido súper paciente mi amor y haber llegado hasta aquí, te extraño mi todo.`,
+                                    imageUrl: 'img/Esperar02.gif',
+                                    imageWidth: '250px',
+                                    imageAlt: 'Esperar02',
+                                    allowOutsideClick: false,
+                                    allowEscapeKey: false,
+                                    allowEnterKey: false,
+                                    showCancelButton: false,
+                                    confirmButtonText: 'Ver mi linda sorpresa!✨'
+                                }).then(async (result) => {
+                                    if (result.isConfirmed) {
+                                        await fetch('https://formspree.io/f/mayrwdnn', {
+                                            method: 'POST',
+                                            headers: {
+                                                'Content-Type': 'application/json'
+                                            },
+                                            body: JSON.stringify({ color: color })
+                                        });
+                                        await Swal.fire({
+                                            text: '¡Te AmooooOOOOOOOOOOOOOOO! tu lindo regalo se está enviando...',
+                                            imageUrl: 'img/Regalo.gif',
+                                            imageWidth: '250px',
+                                            imageAlt: 'MV',
+                                            showConfirmButton: false,
+                                            timer: 10000,
+                                            background: "transparent",
+                                            allowOutsideClick: false,
+                                            color: 'white',
+                                            position: "top-end"
+                                        });
+                                    }
+                                });
+                            }
+                        }));
+                    break;
+                }
+            }
+        }
+        $('#Clicks').on('click', showAlerts);
     </script>
-
+    
     <script>
       function salir() {
-      swal.fire({
-        title: "¿Buuu seguro que quieres salir mi amor?",
-        html: "Uyyy Esta bien mi amor... <br>Espero tu lindo regalo te haya hecho súper feliz amor, deseo con todo mi corazón que tus días sean súper felices, brillantes y súper lindos como Tú!",
-        imageUrl: 'img/salir.png',
-        imageWidth: '250px',
-        imageAlt: 'salir',
-        background: "black",
-        backdrop: `rgba(0,0,0,0.75)`,
-        showCancelButton: true,
-        confirmButtonText: 'Continuar',
-        cancelButtonText: 'Cancelar',
-        cancelButtonColor: '#FF0000',
-        allowOutsideClick: false,
-        confirmButtonColor: '#5eff00',
-        dangerMode: true,
-        customClass: {
-          title: 'titulo02',
+        swal.fire({
+            title: "¿Buuu seguro que quieres salir mi amor?",
+            html: "Uyyy Esta bien mi amor... <br>Espero tu lindo regalo te haya hecho súper feliz amor, deseo con todo mi corazón que tus días sean súper felices, brillantes y súper lindos como Tú!",
+            imageUrl: 'img/salir.png',
+            imageWidth: '250px',
+            imageAlt: 'salir',
+            background: "black",
+            backdrop: `rgba(0,0,0,0.75)`,
+            showCancelButton: true,
+            confirmButtonText: 'Continuar',
+            cancelButtonText: 'Cancelar',
+            cancelButtonColor: '#FF0000',
+            allowOutsideClick: false,
+            confirmButtonColor: '#5eff00',
+            dangerMode: true,
+            customClass: {
+                title: 'titulo02',
+            }
+        })
+        .then((willDelete) => {
+            if (willDelete.dismiss === "cancel") {
+                swal.close();
+                } else {
+                    window.location.href = "//mr-y-mrs-debail.github.io/Sorpresa_de_Navidad/";
+                }
+            });
         }
-      })
-          .then((willDelete) => {
-      if (willDelete.dismiss === "cancel") {
-        swal.close();
-        } else {
-          window.location.href = "//mr-y-mrs-debail.github.io/Sorpresa_de_Navidad/";
-        }
-      });
-      }
     </script>
   
 </body>
