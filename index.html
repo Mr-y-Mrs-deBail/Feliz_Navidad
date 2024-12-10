@@ -35,9 +35,11 @@
     <div class="lighT lights24"></div>
     <div class="lighT lights25"></div>
 
-    <audio controls autoplay loop>
-        <source src="audio/Christmas.mp3" type="audio/mpeg">
-    </audio>
+    <div class="audio-container">
+        <audio controls autoplay loop>
+            <source src="audio/Christmas.mp3" type="audio/mpeg">
+        </audio>
+    </div>
     
     <div class="card">
         <div class="back">
@@ -89,9 +91,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-
     <script>
-
         Swal.fire({
             title: '<b>¡Feliz Navidad!</b>',
             html: '<p class="text-html">Mi súper esposo <br> ¿estás listo para ver tu lindo regalo? <br> Lo hice con todo mi corazón y espero que te guste muchísimo.</p>',
@@ -229,10 +229,10 @@
         async function showAlerts() {
             var clickCount = 0;
             var swalOptions = {
-                background: "#fff url(img/Fondo02.jpg)",
+                background: "url(img/Fondo02.jpg)",
                 confirmButtonColor: '#ac34a2',
                 allowOutsideClick: false,
-                color: 'black',
+                color: 'black',                
                 backdrop: `rgba(0,0,0,0.75)`,
                 customClass: {
                     title: 'titulo03'
